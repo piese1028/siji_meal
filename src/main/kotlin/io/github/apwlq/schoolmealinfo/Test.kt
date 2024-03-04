@@ -14,5 +14,7 @@ fun main()  {
         }
     }
     genImage("${prop["lunch"].toString()}\n${getLunch()}")
+//    println("새로운 시간: ${getNowDate()}")
+//    println("옛날 시간: ${getNowDateOld()}")
 }
 //🗕🗗🗙
