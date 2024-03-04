@@ -21,7 +21,7 @@ jobs:
         run: chmod 400 ./gradlew.bat
 
       - name: Execute Gradle build
-        run: ./gradlew shadowJar
+        run: ./gradlew.bat shadowJar
 
       - name: release
         uses: marvinpinto/action-automatic-releases@latest
