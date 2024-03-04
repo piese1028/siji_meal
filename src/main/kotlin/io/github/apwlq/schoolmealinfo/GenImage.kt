@@ -10,9 +10,9 @@ import java.awt.image.BufferedImage
 import java.io.File
 import javax.imageio.ImageIO
 
-fun genImage(lunch: String, dinner: String): File {
+fun genImage(lunch: String): File {
     val png = File("output/dist.png")
-    AddTextToImg.execute(File("assets/image/image.png"), lunch, dinner, png)
+    AddTextToImg.execute(File("assets/image/image.png"), lunch, png)
     val jpg = File("output/dist.jpg")
     pngToJpg(png, jpg)
     return jpg

@@ -15,7 +15,7 @@ import javax.imageio.ImageIO
 
 object AddTextToImg {
     @JvmStatic
-    fun execute(file: File, lunch: String, dinner: String, out: File) {
+    fun execute(file: File, lunch: String, out: File) {
         //read the image
         val image = ImageIO.read(file)
         //get the Graphics object
@@ -29,12 +29,6 @@ object AddTextToImg {
             g.drawString(str,
                 prop["lunch-x"].toString().toInt(),
                 prop["lunch-y"].toString().toInt()
-                        + ind * prop["draw-leading"].toString().toInt())
-        }
-        dinner.split("\n").forEachIndexed { ind, str ->
-            g.drawString(str,
-                prop["dinner-x"].toString().toInt(),
-                prop["dinner-y"].toString().toInt()
                         + ind * prop["draw-leading"].toString().toInt())
         }
         g.dispose()

@@ -5,7 +5,7 @@ import java.util.*
 
 
 fun main()  {
-    print("[점심]\n${getLunch()}\n[저녁]\n${getDinner()}")
+    print("[점심]\n${getLunch()}")
     val prop = Properties()
     val file = File("assets/config/drawing.properties")
     FileInputStream(file).use { fileInputStream ->
@@ -13,6 +13,6 @@ fun main()  {
             prop.load(inputStreamReader)
         }
     }
-    genImage("${prop["lunch"].toString()}\n${getLunch()}","${prop["dinner"].toString()}\n${getDinner()}")
+    genImage("${prop["lunch"].toString()}\n${getLunch()}")
 }
 //🗕🗗🗙
