@@ -18,10 +18,10 @@ jobs:
         uses: gradle/gradle-build-action@v2
 
       - name: Make gradlew executable
-        run: chmod -x ./gradlew.bat
+        run: chmod -x .\gradlew.bat
 
       - name: Execute Gradle build
-        run: ./gradlew.bat shadowJar
+        run: .\gradlew.bat shadowJar
 
       - name: release
         uses: marvinpinto/action-automatic-releases@latest
