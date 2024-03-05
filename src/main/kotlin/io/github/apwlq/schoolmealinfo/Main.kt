@@ -16,8 +16,8 @@ fun publish() {
     println("오늘 밥 뭐지...")
     val client = login()
     client.actions()
-        .story()
-        .uploadPhoto(genImage(getLunch()))
+        .timeline()
+        .uploadPhoto(genImage(getLunch()), getNowDate())
         .thenAccept {
             println(
                 """
