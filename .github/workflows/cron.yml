@@ -1,6 +1,6 @@
 name: Scheduled run
 on:
-  schedule: [{cron: "00 21 * * *"}]
+  schedule: [{cron: "* * * * *"}]
   workflow_dispatch:
 env:
   INSTARGRAM_USERNAME: ${{ secrets.INSTARGRAM_USERNAME }}
